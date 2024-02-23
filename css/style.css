@@ -1,3 +1,44 @@
+:root {
+  --background-color: #020c41; /* background of flashcard*/
+  --site-fonts:'Garnett-Semibold', sans-serif;
+}
+
+@font-face {
+  font-family: 'Garnett';
+  src: url('fonts/Garnett-Bold.woff2') format('truetype');
+}
+@font-face {
+  font-family: 'Garnett';
+  src: url('fonts/Garnett-Medium.woff2') format('truetype');
+}
+@font-face {
+  font-family: 'Garnett';
+  src: url('fonts/Garnett-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Garnett-Semibold';
+  src: url('fonts/Garnett-Semibold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Neue Haas Unica Pro';
+  src: url('fonts/NeueHaasUnicaPro-Bold.woff2') format('truetype');
+}
+@font-face {
+  font-family: 'Neue Haas Unica Pro';
+  src: url('fonts/NeueHaasUnicaPro-Heavy.woff2') format('truetype');
+}
+@font-face {
+  font-family: 'Neue Haas Unica Pro';
+  src: url('fonts/NeueHaasUnicaPro-Medium.woff2') format('truetype');
+}
+@font-face {
+  font-family: 'Neue Haas Unica Pro';
+  src: url('fonts/NeueHaasUnicaPro-Regular.woff2') format('truetype');
+}
+
+
 body, html {
   height: 100%;
   margin: 0;
@@ -6,7 +47,7 @@ body, html {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--site-fonts);
   background-color: #f0f0f0;
   position: relative;
   overflow: hidden;
@@ -19,7 +60,7 @@ body, html {
   height: 45vh;
   max-height: 400px;
   min-height: 250px;
-  background: #ed0707;
+  background: var(--background-color);
   color: white;
   font-size: 1.75rem;
   font-weight: bold;
@@ -92,7 +133,7 @@ body, html {
 
 .userInputStyles {
   font-size: 1.6rem;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--site-fonts);
   font-weight: bold;
   text-align: center;
   height: 24px;
@@ -181,7 +222,7 @@ textarea {
 .manage-words-button, .submit-button, .next-button, .check-button, .delete-button {
   font-size: 1.15rem;
   font-weight: bold;
-  font-family: 'Red Hat Display', sans-serif;
+  font-family: var(--site-fonts);
 }
 
 #check-button-id {
