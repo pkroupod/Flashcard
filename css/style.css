@@ -1,0 +1,219 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  background-color: #f0f0f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.flashcard {
+  width: 60vw;
+  max-width: 500px;
+  min-width: 400px;
+  height: 45vh;
+  max-height: 400px;
+  min-height: 250px;
+  background: #ed0707;
+  color: white;
+  font-size: 1.75rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flashcard input[type="text"] {
+  margin-top: 20px;
+}
+
+.flashcard button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.next-button {
+  display: none;
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.manage-words-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: #ff3093;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.manage-words-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.userInputStyles {
+  font-size: 1.6rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  height: 24px;
+  width: 65%;
+  color: #008CBA;
+  align-items: center;
+  color: #1b1b1b;
+  padding: .4375rem 1rem;
+  border-radius: .25rem;
+  background: #fff;
+  cursor: text;
+  border: 1px solid #d9d9d9;
+}
+
+.userInputStyles:focus {
+  outline: none;
+}
+
+.manage-words-content {
+  background-color: white;
+  width: 70%; /* Increased width */
+  height: 80%; /* Increased height */
+  max-width: 800px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: auto; /* To handle overflow */
+}
+
+textarea {
+  width: 100%;
+  height: 70%; /* Increased height */
+  resize: both;
+}
+
+#englishWord {
+  margin-bottom: 0.5rem;
+}
+
+.close-button {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.result-display {
+  display: flex;
+  align-items: center; /* Centers children vertically */
+  justify-content: center; /* Centers children horizontally */
+}
+
+.svg-container {
+  display: flex;
+  align-items: center; /* Center SVG vertically */
+  margin-right: 0.3rem; /* Space between SVG and text */
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.result-display span {
+  line-height: 1; /* Adjust this as needed */
+  vertical-align: middle;
+}
+
+
+.submit-button, .delete-button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #ff3093;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.manage-words-button, .submit-button, .next-button, .check-button, .delete-button {
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+#check-button-id {
+  font-size: 1rem;
+}
+
+.check-button {
+  background-color: #1D9BF0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 1.8rem;
+  width: 5rem
+}
+
+.next-button {
+  display: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #ff3093;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resultUserInput {
+  font-size: 1.2rem !important;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+}
+
+#resultCorrectness {
+  font-size: 1.2rem !important;
+}
