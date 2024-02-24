@@ -57,7 +57,7 @@ body, html {
   align-items: center;
   font-size: 16px;
   font-family: var(--site-fonts);
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   position: relative;
   overflow: hidden;
 }
@@ -115,7 +115,7 @@ body, html {
 
 .manage-words-button {
   position: fixed;
-  top: 20px;
+  top: 15px;
   right: 20px;
   padding: 10px 15px;
   background-color: var(--background-color-buttons);
@@ -277,4 +277,37 @@ textarea {
 .manage-words-button-disabled {
   opacity: 0.5;
   cursor: auto;
+}
+
+/* styles for the day and night mode buttons */
+
+.mode-buttons {
+  display: flex; /* Add flexbox display to ensure side by side layout */
+  align-items: center; /* Center items vertically */
+  position: fixed;
+  top: 15px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.mode-buttons button {
+  display: flex; /* Add flexbox display */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-right: 5px;
+  padding: 0;
+  width: 40px; /* Adjust the width as needed */
+  height: 40px; /* Adjust the height as needed */
+  cursor: pointer;
+  background-color: #020c41;
+  border: none;
+  border-radius: 5px;
+}
+
+.mode-buttons button svg {
+  width: 80%; /* Make SVG elements fill the button */
+  height: 80%; /* Make SVG elements fill the button */
+  display: flex; /* Add flexbox display */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
 }
