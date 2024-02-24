@@ -10,6 +10,7 @@ var correctAnswersCount = 0;
 
 
 document.addEventListener('DOMContentLoaded', function () {
+  toggleMode(); // loads night or day mode depending on the browser
   loadFlashcards();
 
   document.addEventListener('keypress', function(event) {
@@ -31,6 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 });
+
+
+// for changing to dark or day mode automatically based on the browser settings
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+  toggleMode(event.matches ? 'night' : 'day');
+});
+
 
 document.getElementById('nextButton').addEventListener('click', function() {
   console.log("nextbutton clicked")
