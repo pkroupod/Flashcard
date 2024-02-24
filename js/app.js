@@ -22,10 +22,16 @@ document.getElementById('nextButton').addEventListener('click', function() {
     shuffleWordPairs();
     roundCompleted = false;
 
+
+    // starting a new round, disable
     const deleteButton = document.querySelector('.delete-button');
     deleteButton.disabled = true;
     const submitButton = document.querySelector('.submit-button');
     submitButton.disabled = true;
+
+    const manageWordsButton = document.querySelector('.manage-words-button');
+    manageWordsButton.disabled = true;
+    manageWordsButton.classList.add('manage-words-button-disabled');
 
 
     this.innerText = 'Next';

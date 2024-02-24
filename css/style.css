@@ -273,3 +273,10 @@ textarea {
   opacity: 0.5; /* Faded effect */
   cursor: auto;
 }
+
+
+
+.manage-words-button-disabled {
+  opacity: 0.5;
+  cursor: auto;
+}

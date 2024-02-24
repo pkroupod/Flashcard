@@ -16,6 +16,18 @@ function loadFlashcards() {
 
 
 
+  // Adjusted control for Manage Words button
+  const manageWordsButton = document.querySelector('.manage-words-button');
+  if (wordPairsArray.length > 0) {
+    manageWordsButton.disabled = true;
+    manageWordsButton.classList.add('manage-words-button-disabled');
+  } else {
+    manageWordsButton.disabled = false;
+    manageWordsButton.classList.remove('manage-words-button-disabled');
+  }
+
+
+
 
   if (wordPairsArray.length >= 3) {
     shuffleWordPairs();

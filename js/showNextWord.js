@@ -18,10 +18,16 @@ function showNextWord() {
 
     roundCompleted = true;
     correctAnswersCount = 0;
+
+    // round is completed, you can manage the words
+
     const deleteButton = document.querySelector('.delete-button');
     deleteButton.disabled = false;
     const submitButton = document.querySelector('.submit-button');
     submitButton.disabled = false;
+    const manageWordsButton = document.querySelector('.manage-words-button');
+    manageWordsButton.disabled = false;
+    manageWordsButton.classList.remove('manage-words-button-disabled');
 
     shuffleWordPairs();
     currentWordIndex = 0;
