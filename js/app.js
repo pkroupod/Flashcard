@@ -11,9 +11,26 @@ var correctAnswersCount = 0;
 
 document.addEventListener('DOMContentLoaded', function () {
   loadFlashcards();
+
+  document.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+      const activeElement = document.activeElement;
+      const userInput = document.getElementById('userInput');
+      const nextButton = document.getElementById('nextButton');
+      const checkButton = document.getElementById('check-button-id');
+
+      if (activeElement === userInput && checkButton) {
+        // If user is focused on the input field, trigger the Check button
+        event.preventDefault();
+        checkButton.click();
+      } else if (nextButton && !nextButton.disabled && nextButton.innerText !== 'Restart') {
+        // Otherwise, if the Next button is enabled, trigger the Next button
+        nextButton.click();
+      }
+    }
+  });
+
 });
-
-
 
 document.getElementById('nextButton').addEventListener('click', function() {
   console.log("nextbutton clicked")

@@ -61,13 +61,4 @@ function showNextWord() {
   document.getElementById('nextButton').disabled = true;
   document.getElementById('nextButton').classList.add('next-button-disabled');
 
-  // add event listener for pressing enter in order to check the answer
-  const userInput = document.getElementById('userInput');
-  userInput.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-      event.preventDefault(); // Prevent the default action (form submission)
-      document.getElementById('check-button-id').click(); // Trigger the button click
-    }
-  });
-
 }
