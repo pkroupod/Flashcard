@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
   loadFlashcards();
 
 
+  const modeButtons = document.querySelector('.mode-buttons');
+  if (modeButtons) {
+    modeButtons.style.display = 'flex'; // Change to 'flex' to display them
+  }
 
   document.getElementById('dayButton').addEventListener('click', function() {
     toggleMode('day');

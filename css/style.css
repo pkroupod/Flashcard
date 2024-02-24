@@ -354,3 +354,8 @@ html.night-mode #progressDisplay {
 .flashcard-container {
   display: none; /* Initially hide the flashcard container */
 }
+
+.mode-buttons {
+  display: none; /* Hide the mode buttons initially */
+  /* ... other existing styles ... */
+}
