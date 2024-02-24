@@ -53,5 +53,6 @@ function showNextWord() {
         `;
   document.getElementById('nextButton').style.display = 'block';
   document.getElementById('nextButton').disabled = true;
+  document.getElementById('nextButton').classList.add('next-button-disabled');
 
 }

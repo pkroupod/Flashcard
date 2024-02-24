@@ -32,4 +32,5 @@ function checkAnswer(correctSpanishWord) {
 
   // Enable the next button to allow moving to the next word
   document.getElementById('nextButton').disabled = false;
+  document.getElementById('nextButton').classList.remove('next-button-disabled');
 }

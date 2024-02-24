@@ -268,3 +268,8 @@ textarea {
   margin-top: -0.4rem;
   margin-bottom: -0.4rem;
 }
+
+.next-button-disabled {
+  opacity: 0.5; /* Faded effect */
+  cursor: auto;
+}
