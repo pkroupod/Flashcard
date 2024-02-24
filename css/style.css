@@ -311,3 +311,31 @@ textarea {
   justify-content: center; /* Center content horizontally */
   align-items: center; /* Center content vertically */
 }
+
+
+/* Styles for toggling day and night mode */
+
+/* Night mode styles */
+html.night-mode, html.night-mode body {
+  background-color: #000000; /* Dark background for night mode */
+}
+
+html.night-mode .userInputStyles, html.night-mode .manage-words-container input[type="text"] {
+  background: #333; /* Dark background for input boxes */
+  color: #fff; /* White text for input boxes */
+  border: 1px solid #555; /* Optional: Adjust border color for better visibility */
+}
+
+html.night-mode .manage-words-container {
+  background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent dark background for manage words window */
+}
+
+html.night-mode .manage-words-content, html.night-mode textarea {
+  background-color: #2a2a2a; /* Dark background for the content in manage words window */
+  color: #fff; /* White text inside manage words window */
+}
+
+html.night-mode #progressDisplay {
+  color: #fff; /* White text for progress display in night mode */
+}
+
