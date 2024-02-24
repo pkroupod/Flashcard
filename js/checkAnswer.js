@@ -1,7 +1,7 @@
 function checkAnswer(correctSpanishWord) {
   const userInput = document.getElementById('userInput').value;
   const englishWord = document.getElementById('englishWord').innerText;
-  const isCorrect = userInput.trim() === correctSpanishWord;
+  const isCorrect = userInput.trim().toLowerCase() === correctSpanishWord.toLowerCase();
 
   if (isCorrect) {
     correctAnswersCount++;
