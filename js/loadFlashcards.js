@@ -26,16 +26,20 @@ function loadFlashcards() {
     manageWordsButton.classList.remove('manage-words-button-disabled');
   }
 
-
-
-
   if (wordPairsArray.length >= 3) {
     shuffleWordPairs();
     currentWordIndex = 0;
     showNextWord();
+
+
+    // Show the flashcard container here
+    document.querySelector('.flashcard-container').style.display = 'flex';
+
   } else {
     document.getElementById('flashcard').innerHTML = 'Please add at least 3 words';
     document.getElementById('nextButton').style.display = 'none';
   }
+
+
   isPageLoaded = false;
 }

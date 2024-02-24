@@ -20,6 +20,30 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+
+  <script>
+    (function() {
+      const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      handleDarkModeChange(darkModeMediaQuery);
+
+      // Optional: Add an event listener if you want to react to changes in color scheme
+      darkModeMediaQuery.addEventListener('change', handleDarkModeChange);
+
+      function handleDarkModeChange(e) {
+        if (e.matches) {
+          // Dark mode
+          document.documentElement.style.backgroundColor = '#000000'; // Dark mode background color
+          document.documentElement.classList.add('night-mode');
+        } else {
+          // Light mode
+          document.documentElement.style.backgroundColor = '#ffffff'; // Light mode background color
+          document.documentElement.classList.remove('night-mode');
+        }
+      }
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -84,6 +108,25 @@
 
   <script src="js/app.js"></script>
 
-</body>
+  <script>
+    // Set color scheme and adjust initial visibility of elements
+    document.addEventListener('DOMContentLoaded', function () {
+      const darkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const htmlElement = document.documentElement;
+      const flashcardContainer = document.querySelector('.flashcard-container');
 
+      if (darkMode) {
+        htmlElement.classList.add('night-mode');
+      }
+
+      // Show the flashcard container
+      flashcardContainer.style.display = 'flex';
+    });
+  </script>
+
+</body>
+</html>
+
+
+</body>
 </html>

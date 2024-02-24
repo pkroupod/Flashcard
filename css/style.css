@@ -48,6 +48,15 @@
 }
 
 
+
+
+html.night-mode, html.night-mode body {
+  background-color: #000000; /* Dark mode background */
+}
+
+
+
+
 body, html {
   height: 100%;
   margin: 0;
@@ -315,7 +324,6 @@ textarea {
 
 /* Styles for toggling day and night mode */
 
-/* Night mode styles */
 html.night-mode, html.night-mode body {
   background-color: #000000; /* Dark background for night mode */
 }
@@ -339,3 +347,10 @@ html.night-mode #progressDisplay {
   color: #fff; /* White text for progress display in night mode */
 }
 
+
+
+/* handling issues during the initial page load */
+
+.flashcard-container {
+  display: none; /* Initially hide the flashcard container */
+}

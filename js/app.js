@@ -13,6 +13,19 @@ document.addEventListener('DOMContentLoaded', function () {
   toggleMode(); // loads night or day mode depending on the browser
   loadFlashcards();
 
+
+
+  document.getElementById('dayButton').addEventListener('click', function() {
+    toggleMode('day');
+  });
+
+  document.getElementById('nightButton').addEventListener('click', function() {
+    toggleMode('night');
+  });
+
+
+
+
   document.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
       const activeElement = document.activeElement;
