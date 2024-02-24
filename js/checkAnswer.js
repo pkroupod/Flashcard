@@ -1,7 +1,12 @@
 function checkAnswer(correctSpanishWord) {
-  const userInput = document.getElementById('userInput').value;
+  let userInput = document.getElementById('userInput').value;
   const englishWord = document.getElementById('englishWord').innerText;
-  const isCorrect = userInput.trim().toLowerCase() === correctSpanishWord.toLowerCase();
+
+  userInput = userInput.trim().replace(/\s+/g, ' ').toLowerCase();
+  const normalizedCorrectSpanishWord = correctSpanishWord.trim().replace(/\s+/g, ' ').toLowerCase();
+
+  const isCorrect = userInput === normalizedCorrectSpanishWord;
+
 
   if (isCorrect) {
     correctAnswersCount++;
