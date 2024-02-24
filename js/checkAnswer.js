@@ -22,7 +22,7 @@ function checkAnswer(correctSpanishWord) {
         <div id="resultEnglishWord">${englishWord}</div>
         <div id="resultEqualsSign">=</div>
         <div id="resultSpanishWord">${correctSpanishWord}</div>
-        <div id="resultUserInput">You typed: ${userInput}</div>
+        <div id="resultUserInput">You typed:&nbsp;&nbsp;<span id="resultUserInputTyped">${userInput}</span></div>
         <div id="resultCorrectness" class="result-display">
             ${isCorrect ?
     `<span class="svg-container">${correctSVG}</span><span class="text-container">Correct</span>` :

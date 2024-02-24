@@ -1,6 +1,11 @@
 :root {
   --background-color: #020c41; /* background of flashcard*/
+  --input-text-color: #020c41;
   --site-fonts:'Garnett-Medium', sans-serif;
+  --background-color-buttons: #07e7cc; /* background color for submit, delete, manage words and next button*/
+  --text-for-buttons: #020c41; /* text color in the submit, delete, manage words and next button*/
+  --check-button-background: #fa0073; /* color of the check button background*/
+  --spanish-word-result-color: #fa0073; /* color of the Spanish word result */
 }
 
 @font-face {
@@ -12,8 +17,12 @@
   src: url('../fonts/Garnett-Medium.woff2') format('truetype');
 }
 @font-face {
-  font-family: 'Garnett';
+  font-family: 'Garnett-Regular';
   src: url('../fonts/Garnett-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Garnett-RegularItalic';
+  src: url('../fonts/Garnett-RegularItalic.woff2') format('woff2');
 }
 
 @font-face {
@@ -96,11 +105,12 @@ body, html {
 .next-button {
   display: none;
   padding: 10px 20px;
-  background-color: #008CBA;
-  color: white;
+  color: var(--text-for-buttons);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 20px;
+  background-color: var(--background-color-buttons);
 }
 
 .manage-words-button {
@@ -108,8 +118,8 @@ body, html {
   top: 20px;
   right: 20px;
   padding: 10px 15px;
-  background-color: #ff3093;
-  color: white;
+  background-color: var(--background-color-buttons);
+  color: var(--text-for-buttons);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -138,9 +148,8 @@ body, html {
   text-align: center;
   height: 24px;
   width: 65%;
-  color: #008CBA;
   align-items: center;
-  color: #1b1b1b;
+  color: var(--input-text-color);
   padding: .4375rem 1rem;
   border-radius: .25rem;
   background: #fff;
@@ -199,9 +208,6 @@ textarea {
   align-items: center;
 }
 
-
-
-
 .result-display span {
   line-height: 1; /* Adjust this as needed */
   vertical-align: middle;
@@ -212,8 +218,8 @@ textarea {
   width: 100%;
   padding: 10px;
   margin-top: 20px;
-  background-color: #ff3093;
-  color: white;
+  background-color: var(--background-color-buttons);
+  color: var(--text-for-buttons);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -230,7 +236,7 @@ textarea {
 }
 
 .check-button {
-  background-color: #1D9BF0;
+  background-color: var(--check-button-background);
   color: white;
   border: none;
   border-radius: 5px;
@@ -238,23 +244,27 @@ textarea {
   width: 5rem
 }
 
-.next-button {
-  display: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  background-color: #ff3093;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 #resultUserInput {
   font-size: 1.2rem !important;
-  margin-top: 2rem;
+  font-family: 'Garnett-Regular', sans-serif;
+  margin-top: 3rem;
   margin-bottom: 0.6rem;
+}
+
+#resultUserInputTyped {
+  font-family: 'Garnett-RegularItalic', sans-serif;
 }
 
 #resultCorrectness {
   font-size: 1.2rem !important;
+  margin-top: 0.4rem;
+}
+
+#resultSpanishWord {
+  color: var(--spanish-word-result-color);
+}
+
+#resultEqualsSign {
+  margin-top: -0.4rem;
+  margin-bottom: -0.4rem;
 }
