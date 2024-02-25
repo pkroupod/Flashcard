@@ -225,13 +225,13 @@ textarea {
 
 #resultUserInput {
   font-size: 1.2rem !important;
-  font-family: 'Garnett-Regular', sans-serif;
+  font-family: var(--site-fonts);
   margin-top: 3rem;
   margin-bottom: 0.6rem;
 }
 
 #resultUserInputTyped {
-  font-family: 'Garnett-RegularItalic', sans-serif;
+  font-family: var(--site-fonts);
 }
 
 #resultCorrectness {
