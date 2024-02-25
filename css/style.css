@@ -9,10 +9,6 @@
 }
 
 @font-face {
-  font-family: 'Garnett';
-  src: url('../fonts/Garnett-Bold.woff2') format('truetype');
-}
-@font-face {
   font-family: 'Garnett-Medium';
   src: url('../fonts/Garnett-Medium.woff2') format('truetype');
 }
@@ -25,37 +21,11 @@
   src: url('../fonts/Garnett-RegularItalic.woff2') format('woff2');
 }
 
-@font-face {
-  font-family: 'Garnett-Semibold';
-  src: url('../fonts/Garnett-Semibold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Neue Haas Unica Pro';
-  src: url('../fonts/NeueHaasUnicaPro-Bold.woff2') format('truetype');
-}
-@font-face {
-  font-family: 'Neue Haas Unica Pro';
-  src: url('../fonts/NeueHaasUnicaPro-Heavy.woff2') format('truetype');
-}
-@font-face {
-  font-family: 'Neue Haas Unica Pro';
-  src: url('../fonts/NeueHaasUnicaPro-Medium.woff2') format('truetype');
-}
-@font-face {
-  font-family: 'Neue Haas Unica Pro';
-  src: url('../fonts/NeueHaasUnicaPro-Regular.woff2') format('truetype');
-}
-
-
 
 
 html.night-mode, html.night-mode body {
   background-color: #000000; /* Dark mode background */
 }
-
-
-
 
 body, html {
   height: 100%;
@@ -355,7 +325,6 @@ html.night-mode #progressDisplay {
   display: none; /* Initially hide the flashcard container */
 }
 
-.mode-buttons {
-  display: none; /* Hide the mode buttons initially */
-  /* ... other existing styles ... */
+.hidden-mode-buttons {
+  display: none;
 }

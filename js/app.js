@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
   toggleMode(); // loads night or day mode depending on the browser
   loadFlashcards();
 
-
   const modeButtons = document.querySelector('.mode-buttons');
   if (modeButtons) {
     modeButtons.style.display = 'flex'; // Change to 'flex' to display them

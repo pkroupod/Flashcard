@@ -7,6 +7,9 @@
   <title>Flashcard</title>
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="fonts/Garnett-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Garnett-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Garnett-RegularItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
   <meta name="description" content="">
   <meta property="og:title" content="">
@@ -49,29 +52,33 @@
 <body>
 
   <!--buttons for toggling day and night modes-->
-  <div class="mode-buttons">
-    <button id="dayButton" onclick="toggleMode('day')">
-      <svg width="50px" height="50px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50.0" cy="50.0" r="25" fill="#D5B60A" />
-        <line x1="85.0" y1="50.0" x2="95.0" y2="50.0" stroke="#D5B60A" stroke-width="4" />
-        <line x1="80.31088913245536" y1="67.5" x2="88.97114317029974" y2="72.5" stroke="#D5B60A" stroke-width="4" />
-        <line x1="67.5" y1="80.31088913245534" x2="72.5" y2="88.97114317029974" stroke="#D5B60A" stroke-width="4" />
-        <line x1="50.0" y1="85.0" x2="50.0" y2="95.0" stroke="#D5B60A" stroke-width="4" />
-        <line x1="32.50000000000001" y1="80.31088913245536" x2="27.50000000000001" y2="88.97114317029974" stroke="#D5B60A" stroke-width="4" />
-        <line x1="19.689110867544645" y1="67.5" x2="11.02885682970026" y2="72.5" stroke="#D5B60A" stroke-width="4" />
-        <line x1="15.0" y1="50.00000000000001" x2="5.0" y2="50.00000000000001" stroke="#D5B60A" stroke-width="4" />
-        <line x1="19.689110867544642" y1="32.500000000000014" x2="11.028856829700253" y2="27.500000000000014" stroke="#D5B60A" stroke-width="4" />
-        <line x1="32.499999999999986" y1="19.689110867544656" x2="27.49999999999998" y2="11.028856829700274" stroke="#D5B60A" stroke-width="4" />
-        <line x1="49.99999999999999" y1="15.0" x2="49.99999999999999" y2="5.0" stroke="#D5B60A" stroke-width="4" />
-        <line x1="67.5" y1="19.68911086754465" x2="72.5" y2="11.02885682970026" stroke="#D5B60A" stroke-width="4" />
-        <line x1="80.31088913245534" y1="32.499999999999986" x2="88.97114317029973" y2="27.49999999999998" stroke="#D5B60A" stroke-width="4" />
-      </svg>
-    </button>
-    <button id="nightButton" onclick="toggleMode('night')">
-      <svg fill="#5A40AB" width="50px" height="50px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.719 1.8A8.759 8.759 0 1 1 1.8 13.719c3.335 1.867 7.633 1.387 10.469-1.449 2.837-2.837 3.318-7.134 1.45-10.47z"/>
-      </svg>
-    </button>
+  <div class="mode-buttons hidden-mode-buttons">
+
+    <div class="mode-buttons">
+      <button id="dayButton" onclick="toggleMode('day')">
+        <svg width="50px" height="50px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="50.0" cy="50.0" r="25" fill="#D5B60A" />
+          <line x1="85.0" y1="50.0" x2="95.0" y2="50.0" stroke="#D5B60A" stroke-width="4" />
+          <line x1="80.31088913245536" y1="67.5" x2="88.97114317029974" y2="72.5" stroke="#D5B60A" stroke-width="4" />
+          <line x1="67.5" y1="80.31088913245534" x2="72.5" y2="88.97114317029974" stroke="#D5B60A" stroke-width="4" />
+          <line x1="50.0" y1="85.0" x2="50.0" y2="95.0" stroke="#D5B60A" stroke-width="4" />
+          <line x1="32.50000000000001" y1="80.31088913245536" x2="27.50000000000001" y2="88.97114317029974" stroke="#D5B60A" stroke-width="4" />
+          <line x1="19.689110867544645" y1="67.5" x2="11.02885682970026" y2="72.5" stroke="#D5B60A" stroke-width="4" />
+          <line x1="15.0" y1="50.00000000000001" x2="5.0" y2="50.00000000000001" stroke="#D5B60A" stroke-width="4" />
+          <line x1="19.689110867544642" y1="32.500000000000014" x2="11.028856829700253" y2="27.500000000000014" stroke="#D5B60A" stroke-width="4" />
+          <line x1="32.499999999999986" y1="19.689110867544656" x2="27.49999999999998" y2="11.028856829700274" stroke="#D5B60A" stroke-width="4" />
+          <line x1="49.99999999999999" y1="15.0" x2="49.99999999999999" y2="5.0" stroke="#D5B60A" stroke-width="4" />
+          <line x1="67.5" y1="19.68911086754465" x2="72.5" y2="11.02885682970026" stroke="#D5B60A" stroke-width="4" />
+          <line x1="80.31088913245534" y1="32.499999999999986" x2="88.97114317029973" y2="27.49999999999998" stroke="#D5B60A" stroke-width="4" />
+        </svg>
+      </button>
+      <button id="nightButton" onclick="toggleMode('night')">
+        <svg fill="#5A40AB" width="50px" height="50px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.719 1.8A8.759 8.759 0 1 1 1.8 13.719c3.335 1.867 7.633 1.387 10.469-1.449 2.837-2.837 3.318-7.134 1.45-10.47z"/>
+        </svg>
+      </button>
+    </div>
+
   </div>
 
 
