@@ -261,7 +261,7 @@ textarea {
   /*font-family: var(--site-font-weight-user-answer-italic);*/
   font-family: var(--site-fonts);
   font-weight: 100;
-  font-style: italic;
+  /*font-style: italic;*/
 }
 
 #resultCorrectness {
