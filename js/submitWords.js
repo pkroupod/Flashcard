@@ -4,6 +4,8 @@ function submitWords() {
   const lines = text.split('\n');
   const specialCharRegex = /[!@#$%^&*(),.?":{}|<>0-9]/;
 
+
+
   // Get existing words from local storage
   const existingWordPairs = JSON.parse(localStorage.getItem('wordPairs') || '{}');
 
@@ -45,6 +47,17 @@ function submitWords() {
       allWordsExist = false;
     }
   }
+
+  // console.log("existingWordPairs variable length IS: " + Object.keys(existingWordPairs).length)
+  // console.log("current local storage length IS: " + Object.keys(JSON.parse(localStorage.getItem('wordPairs') || '{}')).length)
+
+  // user can only add at least 3 words when no words are in local storage
+  if (Object.keys(existingWordPairs).length < 3 &&
+    Object.keys(JSON.parse(localStorage.getItem('wordPairs') || '{}')).length < 3) {
+    alert("Please add at least 3 words");
+    return;
+  }
+
 
   if (allWordsExist) {
     alert("All words exist");
